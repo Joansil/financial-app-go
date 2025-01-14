@@ -8,7 +8,7 @@ import (
 
 var mySigningKey = []byte("mySecretKey")
 
-// GenerateJWT generates a JWT token for the user
+
 func GenerateJWT(userID string) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"user_id": userID,
@@ -17,7 +17,7 @@ func GenerateJWT(userID string) (string, error) {
 	return token.SignedString(mySigningKey)
 }
 
-// ParseJWT parseia um token JWT
+
 func ParseJWT(tokenString string) (jwt.MapClaims, error) {
 	token, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
 		return mySigningKey, nil
