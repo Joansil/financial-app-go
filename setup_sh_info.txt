@@ -1,0 +1,6 @@
+ Explicação do Script
+
+    Criação de Diretórios: Utiliza mkdir -p para criar todos os diretórios necessários.
+    Criação de Arquivos: Utiliza touch para criar arquivos vazios e echo para adicionar conteúdo inicial a arquivos como main.go, Dockerfile, docker-compose.yml, etc.
+    Kafka: Cria o código de integração com Kafka diretamente dentro do projeto.
+    Docker: O script configura os arquivos necessários para criar as imagens e os containers do Docker para cada serviço.
